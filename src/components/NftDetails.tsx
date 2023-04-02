@@ -84,10 +84,10 @@ const NftDetails = () => {
                 />
                 <div className='collectionInfo'>
                     <div className='collectionTitle'>
-                        <h2>{data.nft_collection.title}</h2>
+                        <h2>{data.nft_collection?.title}</h2>
                         <VerifiedBadge className='verifiedBadge' />
                     </div>
-                    <h2 className='collectionDescription'>{data.nft_collection.description}</h2>
+                    <h2 className='collectionDescription'>{data.nft_collection?.description}</h2>
                 </div>
             </div>
             <div style={{ visibility: loading ? "hidden" : "visible" }} className='mainContainer'>
