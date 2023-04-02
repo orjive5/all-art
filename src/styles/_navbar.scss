@@ -1,0 +1,19 @@
+$primary: #99c8d1;
+
+.navbar {
+    height: 8rem;
+    background: radial-gradient( 28% 280% at 3% -130%, #ffe352 0%, rgba(255, 201, 97, 0) 100% ),linear-gradient(270deg, #15348d 0%, #90d7ff 99.99%);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    .solSeaBanner {
+        height: 35px;
+        margin-left: 1rem;
+        cursor: pointer;
+    }
+    h1 {
+        font-weight: bold;
+        color: white;
+    }
+}

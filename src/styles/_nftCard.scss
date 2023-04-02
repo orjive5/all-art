@@ -1,0 +1,152 @@
+$primaryText: #091639;
+$primaryGrayText: #676767;
+$secondaryGrayText: #0007;
+$tertiaryGrayText: #b5b9c4;
+$whiteBackground: #fffd;
+
+.nftCard {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    &:hover {
+        background-color: $whiteBackground;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        .buttonsContainer {
+            visibility: visible;
+        }
+    }
+    .imageContainer {
+        position: relative;
+        padding-top: 100%;
+        margin-bottom: 10px;
+        background-color: $whiteBackground;
+        z-index: 1;
+        cursor: pointer;
+        .loader {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            z-index: 0;
+        }
+        .imageOverlay {
+            display: none;
+        }
+        &:hover {
+            .imageOverlay {
+                box-sizing: border-box;
+                padding: 10px;
+                display: flex;
+                justify-content: space-between;
+                background: linear-gradient(180deg, rgba(0,0,0,0.3), rgba(0,0,0,0));
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                z-index: 10;
+                .viewsAndLikes {
+                    display: flex;
+                    gap: 10px;
+                    .views,
+                    .likes {
+                        color: white;
+                        display: flex;
+                        gap: 5px;
+                        font-size: 13px;
+                        line-height: 13px;
+                        text-align: center;
+                        letter-spacing: .05em;
+                    }
+                }
+            }
+        }
+    }
+      
+    .infoContainer {
+        h1 {
+            cursor: pointer;
+            font-size: 1rem;
+            padding-bottom: 10px;
+            font-weight: 600;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            margin-bottom: 0;
+            max-width: calc(100% - 20px);
+            color: $primaryText;
+        }
+        .collection {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            padding-bottom: 10px;
+            cursor: pointer;
+            h2 {
+                font-size: 0.8rem;
+                color: $primaryGrayText;
+            }
+            .verifiedBadge {
+                color: #0d6efd;
+            }
+            h3 {
+                font-size: 0.8rem;
+                font-style: italic;
+                font-weight: 300;
+                color: $tertiaryGrayText;
+            }
+        }
+        .price {
+            h3 {
+                font-size: 10px;
+                font-weight: 300;
+                line-height: 1;
+                color: $secondaryGrayText;
+                margin-bottom: 4px;
+            }
+        }
+    }
+    .buttonsContainer {
+        visibility: hidden;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        margin-top: 10px;
+        gap: 5px;
+        button {
+            flex: 1;
+            font-size: 14px;
+            padding: 8px 0;
+            line-height: 1;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .bidButton {
+            background-color: #fff;
+            color: #020f33;
+            border: 1px solid #020f3350;
+            &:hover {
+                background-color: #eee;
+            }
+        }
+        .buyButton {
+            border: none;
+            background-color: #229af1;
+            color: #fff;
+            &:hover {
+                background-color: #50adf0;
+            }
+        }
+    }
+  }

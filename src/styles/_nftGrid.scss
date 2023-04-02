@@ -1,0 +1,90 @@
+$primary: #f6fbff;
+
+@mixin flexCenter() {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.nftGrid {
+	margin-left: 200px;
+	margin-top: 168px;
+	padding: 20px;
+	background-color: $primary;
+	min-height: 100vh;
+
+	.searchInput {
+		@include flexCenter();
+		gap: 1rem;
+	}
+
+	.searchInput input {
+		border: none;
+		background: transparent;
+		padding-bottom: 7px;
+		border-bottom: 1px solid #a4aaba;
+		width: 500px;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 1rem;
+		line-height: 20px;
+		letter-spacing: .03em;
+		color: #020f33;
+		outline: none;
+		margin-block: 2rem;
+	}
+
+	.searchAndClose {
+		border-radius: 50px;
+		width: 20px;
+		height: 20px;
+		background: #229af1;
+		color: #fff;
+		padding: 7px;
+		cursor: pointer;
+	}
+
+	.noResults {
+		text-align: center;
+	}
+
+	.nftGridContainer {
+		word-wrap: break-word;
+		display: grid;
+		grid-template-columns: repeat(6, minmax(0, 1fr));
+		grid-auto-rows: minmax(100px, auto);
+		grid-auto-flow: dense;
+	}
+	@media (max-width: 1200px) {
+			margin-left: 0;
+
+		.nftGridContainer {
+			grid-template-columns: repeat(5, minmax(0, 1fr));
+		}
+	  }
+	  @media (max-width: 992px) {
+		.nftGridContainer {
+			grid-template-columns: repeat(4, minmax(0, 1fr));
+		}
+	  }
+	  
+	  @media (max-width: 768px) {
+		.nftGridContainer {
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+		}
+	  }
+	  
+	  @media (max-width: 576px) {
+		.nftGridContainer {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+	  }
+	  @media (max-width: 360px) {
+		.nftGridContainer {
+			grid-template-columns: repeat(1, minmax(0, 1fr));
+		}
+	  }
+	.loader {
+		@include flexCenter();
+	}
+}

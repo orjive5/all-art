@@ -1,0 +1,20 @@
+$primary: #1e3154;
+$primaryText: white;
+
+.banner {
+    background-color: $primary;
+    height: 2.5rem;
+    padding-inline: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    align-items: center;
+    color: $primaryText;
+    h1 {
+        font-weight: bold;
+        font-size: 1rem;
+    }
+    h2 {
+        font-size: 0.8rem;
+    }
+}

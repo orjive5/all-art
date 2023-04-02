@@ -1,0 +1,271 @@
+$primary: #f6fbff;
+$titleColor: #091639;
+
+@mixin flexCenter() {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.nftDetails {
+    margin-left: 200px;
+	margin-top: 168px;
+	padding: 20px;
+	background-color: $primary;
+	min-height: 100vh;
+    h1 {
+        text-align: center;
+        margin-block: 1rem;
+    }
+    .collectionContainer {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        width: calc(100% - 250px);
+        padding-bottom: 1rem;
+        img {
+            width: 55px;
+            height: 55px;
+            object-fit: cover;
+            border-radius: 5px;
+            flex-shrink: 0;
+        }
+        .collectionInfo {
+            .collectionDescription {
+                color: $titleColor;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 1.2em;
+            }
+            .collectionTitle {
+                display: flex;
+                align-items: center;
+                letter-spacing: 0;
+                font-weight: 600;
+                font-size: 20px;
+                h2 {
+                    color: #15348d;
+                }
+                .verifiedBadge {
+                    width: 1.5rem;
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+    .mainContainer {
+        display: flex;
+        width: calc(100% - 250px);
+        background-color: #ffff;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        flex-grow: 1;
+        .imageSection {
+            width: 55%;
+            margin: 10px;
+            .imageContainer {
+                position: relative;
+                margin-bottom: 10px;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            .dataContainer {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+                .dataBox {
+                    flex-wrap: wrap;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 2rem;
+                }
+                .views,
+                .likes,
+                .openArtwork,
+                .share {
+                    gap: 5px;
+                    display: flex;
+                    align-items: center;
+                    color: #10052f;
+                    font-size: 14px;
+                    font-weight: 500;
+                    h2 {
+                        color: #10052f80;
+                    }
+                }
+                .likes,
+                .openArtwork {
+                    padding: 7px 10px;
+                    border-radius: 5px;
+                    transition: .3s;
+                    line-height: 1em;
+                    box-sizing: border-box;
+                    min-width: 100px;
+                    max-height: 32px;
+                    border: 1px solid #020f3350;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: #eee;
+                    }
+                }
+                .share {
+                    cursor: pointer;
+                    h2 {
+                        color: #229af1;
+                    }
+                }
+            }
+            .descriptionContainer {
+                margin-top: 80px;
+                h2 {
+                    font-weight: 400;
+                    font-size: 16px;
+                    color: $titleColor;
+                    width: 100%;
+                    text-align: justify;
+                    overflow: hidden;
+                    word-break: break-word;
+                }
+                
+            }
+        }
+        .infoColumn {
+            margin: 20px 20px 20px 10px;
+            width: 45%;
+            padding-bottom: 20px;
+            .topHolder {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 30px;
+                flex-wrap: wrap;
+                .categoryContainer {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 1rem;
+                    h2 {
+                        background: transparent;
+                        padding: 5px 15px;
+                        color: #838c9f;
+                        border-radius: 4px;
+                        font-size: 12px;
+                        line-height: 1em;
+                        border: 1px solid #838c9f;
+                        text-transform: capitalize;
+                    }
+                }
+                button {
+                    display: flex;
+                    flex-direction: row;
+                    align-content: center;
+                    justify-content: center;
+                    background: #0001;
+                    border-radius: 5px;
+                    color: #091639;
+                    padding: 5px 10px;
+                    cursor: pointer;
+                    line-height: 1em;
+                    outline: 0;
+                    border: 0;
+                    &:hover {
+                        background-color: #0002;
+                    }
+                }
+            }
+            .titleContainer {
+                h1 {
+                    font-weight: 600;
+                    font-size: 35px;
+                    color: #091639;
+                    line-height: 1.2em;
+                    text-align: left;
+                    word-wrap: break-word;
+                }
+            }
+            .priceContainer {
+                display: flex;
+                align-items: center;
+                grid-gap: 10px;
+                gap: 10px;
+                margin-bottom: 20px;
+                h2 {
+                    font-weight: 700;
+                    font-size: 45px;
+                    color: #15348d;
+                    line-height: 1em;
+                    -ms-flex-align: center;
+                    align-items: center;
+                    word-wrap: break-word;
+                }
+            }
+            .buyButtonsContainer {
+                margin: 10px 0 10px 0;
+                display: flex;
+                flex-direction: row;
+                grid-gap: 10px;
+                gap: 10px;
+                justify-content: center;
+                flex-wrap: wrap;
+                .buyButton {
+                    font-size: 18px;
+                    font-weight: 400;
+                    transition: .3s;
+                    flex-grow: 1;
+                    flex: 1 1 calc(50% - 5px);
+                    background-color: #229af1;
+                    text-align: center;
+                    color: #fff;
+                    border-radius: 6px;
+                    outline: 0;
+                    font-weight: 500;
+                    text-decoration: none;
+                    padding: 8px 20px;
+                    font-size: 16px;
+                    border: 1px solid transparent;
+                    cursor: pointer;
+                    white-space: nowrap;
+                    &:hover {
+                        background-color: #50adf0;
+                    }
+                }
+                .bidButton {
+                    font-size: 18px;
+                    font-weight: 400;
+                    transition: .3s;
+                    flex-grow: 1;
+                    flex: 1 1 calc(50% - 5px);
+                    background-color: #fff;
+                    text-align: center;
+                    color: #020f33;
+                    border-radius: 6px;
+                    outline: 0;
+                    font-weight: 500;
+                    text-decoration: none;
+                    padding: 8px 20px;
+                    font-size: 16px;
+                    border: 1px solid #020f3350;
+                    cursor: pointer;
+                    white-space: nowrap;
+                    &:hover {
+                        background-color: #eee;
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 1200px) {
+        margin-left: 0;
+        .collectionContainer,
+        .mainContainer {
+            width: calc(100% - 50px);
+        }
+    }
+}
